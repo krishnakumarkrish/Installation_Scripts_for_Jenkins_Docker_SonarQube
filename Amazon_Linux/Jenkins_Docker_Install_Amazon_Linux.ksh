@@ -79,6 +79,16 @@ echo "**********************************************************************"  |
 sudo systemctl start jenkins | tee -a $tmp_jenkins_docker_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+echo "Docker Jenkins Permission"  | tee -a $tmp_jenkins_docker_java_install
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+sudo usermod -aG docker jenkins | tee -a $tmp_jenkins_docker_java_install
+
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+echo "Restart Jenkins"  | tee -a $tmp_jenkins_docker_java_install
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+sudo systemctl restart jenkins | tee -a $tmp_jenkins_docker_java_install
+
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 echo "Check the status of the Jenkins service"  | tee -a $tmp_jenkins_docker_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 sudo systemctl status jenkins | tee -a $tmp_jenkins_docker_java_install
