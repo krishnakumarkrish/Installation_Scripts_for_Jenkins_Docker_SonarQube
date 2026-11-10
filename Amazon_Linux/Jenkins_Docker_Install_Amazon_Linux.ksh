@@ -61,7 +61,7 @@ sudo yum upgrade -y | tee -a $tmp_jenkins_docker_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 echo "Install Java (Amazon Linux 2023)"  | tee -a $tmp_jenkins_docker_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
-sudo dnf install java-17-amazon-corretto -y | tee -a $tmp_jenkins_docker_java_install
+sudo dnf install java-21-amazon-corretto-devel -y | tee -a $tmp_jenkins_docker_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 echo "Install Jenkins"  | tee -a $tmp_jenkins_docker_java_install
