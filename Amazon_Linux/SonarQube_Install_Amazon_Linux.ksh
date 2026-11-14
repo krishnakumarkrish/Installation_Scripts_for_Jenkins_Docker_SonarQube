@@ -32,14 +32,14 @@ echo "**********************************************************************"  |
 sudo yum install wget unzip -y | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install 
-echo "Download SonarQube - 8.9.10.61524"  | tee -a $tmp_sonarqube_install 
+echo "Download SonarQube - 26.11.0.134175"  | tee -a $tmp_sonarqube_install 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install 
-sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip | tee -a $tmp_sonarqube_install
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-26.11.0.134175.zip | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install 
-echo "Unzip SonarQube - 8.9.10.61524"  | tee -a $tmp_sonarqube_install 
+echo "Unzip SonarQube - 26.11.0.134175"  | tee -a $tmp_sonarqube_install 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install 
-sudo unzip sonarqube-8.9.10.61524.zip | tee -a $tmp_sonarqube_install
+sudo unzip sonarqube-26.11.0.134175.zip | tee -a $tmp_sonarqube_install
 
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install 
@@ -48,24 +48,24 @@ echo "**********************************************************************"  |
 sudo useradd sonar | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
-echo "Change user (root to sonar) for sonarqube-8.9.10.61524 folder"  | tee -a $tmp_sonarqube_install
+echo "Change user (root to sonar) for sonarqube-26.11.0.134175 folder"  | tee -a $tmp_sonarqube_install
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
-sudo chown -R sonar:sonar /opt/sonarqube-8.9.10.61524 | tee -a $tmp_sonarqube_install
+sudo chown -R sonar:sonar /opt/sonarqube-26.11.0.134175 | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
-echo "Change Permission 755 to sonarqube-8.9.10.61524 folder"  | tee -a $tmp_sonarqube_install
+echo "Change Permission 755 to sonarqube-26.11.0.134175 folder"  | tee -a $tmp_sonarqube_install
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install		
-sudo chmod -R 775 /opt/sonarqube-8.9.10.61524	 | tee -a $tmp_sonarqube_install
+sudo chmod -R 775 /opt/sonarqube-26.11.0.134175	 | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
 echo "Start SonarQube"  | tee -a $tmp_sonarqube_install
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
-sudo -u sonar /opt/sonarqube-8.9.10.61524/bin/linux-x86-64/sonar.sh start | tee -a $tmp_sonarqube_install
+sudo -u sonar /opt/sonarqube-26.11.0.134175/bin/linux-x86-64/sonar.sh start | tee -a $tmp_sonarqube_install
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
 echo "Status SonarQube"  | tee -a $tmp_sonarqube_install
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
-sudo -u sonar /opt/sonarqube-8.9.10.61524/bin/linux-x86-64/sonar.sh status | tee -a $tmp_sonarqube_install
+sudo -u sonar /opt/sonarqube-26.11.0.134175/bin/linux-x86-64/sonar.sh status | tee -a $tmp_sonarqube_install
 
 
 echo "**********************************************************************"  | tee -a $tmp_sonarqube_install
