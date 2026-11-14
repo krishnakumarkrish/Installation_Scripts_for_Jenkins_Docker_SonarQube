@@ -94,6 +94,12 @@ echo "**********************************************************************"  |
 sudo systemctl status jenkins | tee -a $tmp_jenkins_docker_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+echo "Git Installation"  | tee -a $tmp_jenkins_docker_java_install
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
+sudo sudo yum install git -y | tee -a $tmp_jenkins_docker_java_install
+
+
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 echo "Completed"  | tee -a $tmp_jenkins_docker_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_java_install
 
